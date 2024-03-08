@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "checkJs": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "typeAcquisition": {
+    "enable": true
+  },
+  "compileOnSave": true
+}
