@@ -2,6 +2,10 @@
 
 Being overwhelmed by the complexity of modern web dev tooling we decided to start a JS project from scratch to see where it goes.
 
+To do this we created a new profile on VS Code with no extensions, apart from git history. You can check the User settings later in this article.
+
+Starting our project from scratch, it goes like this:
+
 ```
 > mkdir [project name]
 > cd [project name]
@@ -101,3 +105,50 @@ module.exports = {
 ```
 
 See https://eslint.org/docs/latest/use/getting-started
+
+
+## VS Code
+
+We created a new blank profile in VS Code titled "Web Dev - Plain". This removes any extensions except WSL. We also installed Git History. For starters, We tweaked some *User settings*:
+
+```
+{
+    "editor.formatOnSave": true,
+    "diffEditor.codeLens": true,
+    "editor.screenReaderAnnounceInlineSuggestion": false,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "editor.tabCompletion": "on",
+    "editor.tabSize": 2,
+    "emmet.triggerExpansionOnTab": true,
+    "css.lint.boxModel": "warning",
+    "css.lint.compatibleVendorPrefixes": "warning",
+    "html.format.preserveNewLines": false,
+    "html.format.templating": true,
+    "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+    "javascript.inlayHints.parameterNames.enabled": "literals",
+    "javascript.inlayHints.parameterTypes.enabled": true,
+    "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+    "javascript.inlayHints.variableTypes.enabled": true,
+    "javascript.referencesCodeLens.enabled": true,
+    "javascript.suggest.completeFunctionCalls": true,
+    "js/ts.implicitProjectConfig.checkJs": true,
+    "js/ts.implicitProjectConfig.experimentalDecorators": true
+}
+```
+
+We now have to install the ESLint extension and make some *Workspace* configuration. Also we need to understand which setting are best kept in the workspace.
+
+
+# TODO
+
+- Install ESLint extension from:
+
+  https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+
+- Figure out linting and formatting:
+
+  https://eslint.org/docs/latest/use/getting-started
+
+- Write scripts for building, watching and serving.
+- Write some code ffs!
